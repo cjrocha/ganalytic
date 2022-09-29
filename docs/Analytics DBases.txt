@@ -1,11 +1,3 @@
-Created DBase user: analytics_crawler / pass: 3R5Z@OPS559A7 on host: 206.81.0.206:3306
-
-New DBAses: 
-incontinence
-multirange
-velo
-
-
 Tables for each DBase:
 
 1.create table users(
