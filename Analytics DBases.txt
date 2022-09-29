@@ -1,0 +1,110 @@
+Created DBase user: analytics_crawler / pass: 3R5Z@OPS559A7 on host: 206.81.0.206:3306
+
+New DBAses: 
+incontinence
+multirange
+velo
+
+
+Tables for each DBase:
+
+1.create table users(
+   usr_id INT NOT NULL AUTO_INCREMENT,
+   u_date INT(10),
+   u_year INT(10),
+   u_month INT(4),
+   u_week INT(4),
+   u_day INT(4),
+   u_hour INT(4),
+   u_yearmonth INT(10),
+   u_yearweek INT(10),
+   u_users INT(10),
+   u_newusers INT(10),
+   u_percentnewsessions FLOAT,
+   u_sessionperuser FLOAT,
+   u_sessions INT(10),
+   u_bounces INT(10),
+   u_bouncerate FLOAT,
+   u_sessionduration FLOAT,
+   u_avgsessionduration FLOAT,
+   u_uniquedimensioncombinations INT(10),
+   u_processdate DATE,
+   PRIMARY KEY (usr_id)
+);
+
+2.create table sources(
+   scs_id INT NOT NULL AUTO_INCREMENT,
+   so_date INT(10),
+   so_year INT(10),
+   so_month INT(4),
+   so_week INT(4),
+   so_day INT(4),
+   so_hour INT(4),
+   so_yearmonth INT(10),
+   so_yearweek INT(10),
+   so_campaign VARCHAR(250),
+   so_source VARCHAR(250),
+   so_medium VARCHAR(250),
+   so_sourcemedium VARCHAR(250),
+   so_keyword VARCHAR(250),
+   so_devicecategory VARCHAR(250),
+   so_organicsearches INT(10),
+   so_socialInteractions INT(10),
+   so_socialInteractionsPerSession FLOAT,
+   so_processdate DATE,
+   PRIMARY KEY (scs_id)
+);
+
+3.create table adds(
+   add_id INT NOT NULL AUTO_INCREMENT,
+   a_date INT(10),
+   a_year INT(10),
+   a_month INT(4),
+   a_week INT(4),
+   a_day INT(4),
+   a_yearmonth INT(10),
+   a_yearweek INT(10),
+   a_adgroup VARCHAR(50),
+   a_adkeywordmatchtype VARCHAR(250),
+   a_admatchedquery VARCHAR(250),
+   a_impressions INT(10),
+   a_adclicks INT(10),
+   a_adcost FLOAT,
+   a_cpc FLOAT,
+   a_ctr FLOAT,
+   a_costperconversion FLOAT,
+   a_goalcompletionsall FLOAT,
+   a_costpergoalconversion FLOAT,
+   a_goalconversionrateall FLOAT,
+   a_processdate DATE,
+   PRIMARY KEY (add_id)
+);
+
+4.create table pagesessions(
+   pgs_id INT NOT NULL AUTO_INCREMENT,
+   p_date INT(10),
+   p_year INT(10),
+   p_month INT(4),
+   p_week INT(4),
+   p_day INT(4),
+   p_hour INT(4),
+   p_yearmonth INT(10),
+   p_yearweek INT(10),
+   p_hostname VARCHAR(250),
+   p_pagepath VARCHAR(250),
+   p_pagetitle VARCHAR(250),
+   p_landingpagepath VARCHAR(250),
+   p_exitpagepath VARCHAR(250),
+   p_pagevalue FLOAT,
+   p_entrances INT(10),
+   p_entrancerate FLOAT,
+   p_pageviews INT(10),
+   p_pageviewspersession FLOAT,
+   p_uniquepageviews INT(10),
+   p_timeonpage FLOAT,
+   p_avgtimeonpage FLOAT,
+   p_exits INT(10),
+   p_exitrates FLOAT,
+   p_processdate DATE,
+   PRIMARY KEY (pgs_id)
+);
