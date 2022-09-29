@@ -12,9 +12,9 @@ require_once __DIR__ . '/google-api/Logging.php';
 $sysdate = date("Y-m-d");  //System Date required in Tables
 
 //DB Credentials
-$servername = "206.81.0.206:3306";
-$username = "analytics_crawler";
-$password = "3R5Z@OPS559A7";
+$servername = "xxxx";
+$username = "xxxx";
+$password = "***********";
 
 //Start logging reporting
 $log = new Logging();
@@ -30,7 +30,7 @@ $client->setAuthConfig($KEY_FILE_LOCATION);
 $client->setScopes(['https://www.googleapis.com/auth/analytics.readonly']);
 $analytics = new Google_Service_Analytics($client);
 
-//Accounts to be checked: Incontinence->98225752; Multi Range->115772635; Velo Hand Dryers->98229323
+//Accounts to be checked: id's of accounts from Google Analytics
 $viewId = [98225752, 115772635, 98229323];
 foreach ($viewId as $siteId){
 	if ($siteId == 98225752){

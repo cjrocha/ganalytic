@@ -12,9 +12,9 @@ require_once __DIR__ . '/google-api/Logging.php';
 $gdate = date("Y-m-d");  //System Date required in Tables
 
 //DB Credentials
-$servername = "206.81.0.206:3306";
-$username = "analytics_crawler";
-$password = "3R5Z@OPS559A7";
+$servername = "";
+$username = "";
+$password = "";
 
 //Start logging reporting
 $log = new Logging();

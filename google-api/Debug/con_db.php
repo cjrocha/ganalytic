@@ -1,7 +1,7 @@
 <?php
 	error_reporting(0);
 
-  $link = mysql_connect('https://tools.hpagroup.com.au:3306',"analytics_crawler","3R5Z@OPS559A7");
+  $link = mysql_connect('host',"user","pass");
 	if(!$link)
 	{
 		die('Failed to connect to server: ' . mysql_error());
